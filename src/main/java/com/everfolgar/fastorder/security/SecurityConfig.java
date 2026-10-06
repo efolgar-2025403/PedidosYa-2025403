@@ -40,6 +40,9 @@ public class SecurityConfig {
                 .requestMatchers(org.springframework.http.HttpMethod.PATCH, "/api/v1/pedidos/*/cancelar").hasAnyRole("CLIENTE", "ADMIN")
                 .anyRequest().authenticated()
             )
+            .exceptionHandling(ex -> ex
+                .authenticationEntryPoint((req, res, e) -> res.sendError(401, "No autenticado"))
+                .accessDeniedHandler((req, res, e) -> res.sendError(403, "Acceso denegado")))
             .authenticationProvider(authenticationProvider())
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
