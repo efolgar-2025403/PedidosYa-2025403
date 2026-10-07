@@ -1,7 +1,7 @@
 INSERT INTO usuarios (id, nombre, direccion, telefono, email, password, rol) VALUES
-(1, 'Administrador', 'Zona 1', '55550000', 'admin@fastorder.com', '$2a$10$jU1m3Ptc.ECo.bKy49.CY.cGqE/nfyTRaN8R26jJARIIp7lYNQ33C', 'ADMIN'),
-(2, 'Repartidor Uno', 'Zona 2', '55550001', 'repartidor@fastorder.com', '$2a$10$jU1m3Ptc.ECo.bKy49.CY.cGqE/nfyTRaN8R26jJARIIp7lYNQ33C', 'REPARTIDOR'),
-(3, 'Cliente Demo', 'Zona 3', '55550002', 'cliente@fastorder.com', '$2a$10$jU1m3Ptc.ECo.bKy49.CY.cGqE/nfyTRaN8R26jJARIIp7lYNQ33C', 'CLIENTE')
+(1, 'Administrador', 'Zona 1', '55550000', 'admin@fastorder.com', '$2a$10$voRVIlA4XKRZwkyeg0/uieRzZ73vcmRlLGuX3LoZBVYxBoe3Kr37K', 'ADMIN'),
+(2, 'Repartidor Uno', 'Zona 2', '55550001', 'repartidor@fastorder.com', '$2a$10$YZOdipYHRm63ZkfXgBj8E.TixxSTSr8i9.7OVwcrSsWyC9hzmjJi6', 'REPARTIDOR'),
+(3, 'Cliente Demo', 'Zona 3', '55550002', 'cliente@fastorder.com', '$2a$10$LiZA9wMgccRlqP44b045LOQS7EKx4mVNX.L36sE9ezjlZJVWK3lYG', 'CLIENTE')
 ON CONFLICT (email) DO NOTHING;
 
 INSERT INTO comercios (id, nombre, categoria, direccion, abierto) VALUES
